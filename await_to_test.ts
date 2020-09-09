@@ -1,6 +1,6 @@
 // Copyright 2019-2020 Roi Kramer. All rights reserved. MIT license.
 import { assertEquals } from "./_test_deps.ts";
-import { to } from "./mod.ts";
+import to from "./mod.ts";
 
 Deno.test("await-to should return the correct types", async () => {
   const [err, res] = await to(async () => 1);

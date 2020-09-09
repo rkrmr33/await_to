@@ -1,8 +1,8 @@
 // Copyright 2019-2020 Roi Kramer. All rights reserved. MIT license.
 
-export const to = async <T>(
+export default async function<T>(
   awaitable: () => Promise<T> | Promise<T>,
-): Promise<([null | Error, T])> => {
+): Promise<([null | Error, T])> {
   try {
     let promise: Promise<T>;
     if (typeof awaitable === "function") {
